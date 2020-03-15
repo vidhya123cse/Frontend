@@ -7,16 +7,17 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <script defer src="/__/firebase/7.10.0/firebase-app.js"></script>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.11.0/firebase-app.js"></script>
   <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/7.10.0/firebase-auth.js"></script>
-  <script defer src="/__/firebase/7.10.0/firebase-database.js"></script>
-  <script defer src="/__/firebase/7.10.0/firebase-messaging.js"></script>
-  <script defer src="/__/firebase/7.10.0/firebase-storage.js"></script>
+  <script defer src="/__/firebase/7.11.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.11.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.11.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.11.0/firebase-storage.js"></script>
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
   <script defer src="index.js"></script>
-
+  
 
 
   <!-- Favicons -->
@@ -35,6 +36,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  
 
  
 </head>
@@ -194,6 +196,47 @@ border-color:#2dc997; border-radius: 7%; max-width: 650px;">
 <div id = "register">
 </div>
   <!--Regform -->
+
+
+
+
+
+   
+  <div class="modal fade container-fluid" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-left:0em;">
+    <div class="modal-dialog cascading-modal" role="document" style="max-width: 80%;min-width: 350px;">
+      <!--Content-->
+     
+      <div class="modal-content container-fluid"  style="border-radius: 30%;">
+        
+        <!--Modal cascading tabs-->
+        <center> 
+        <div class="modal-c-tabs" style="max-width: 70%;border-radius: 10%;min-width: 320px;" >
+  
+          <!-- Nav tabs -->
+          
+          <div role="group" aria-label="Basic example">
+
+            <button type="button"   class="btn" style="max-width: 35%; border-radius: 30%;display:inline-block ;margin-top: 30px; color: white;background-color: #2dc997;" onclick="User();" id = "but1">User
+            </button>
+  
+            <button type="button"  class="btn" style="max-width: 35%; border-radius: 30%;min-width: 100px; display:inline-block; margin-top: 30px; margin-bottom: 30px; color: white;background-color: #2dc997;" onclick="Authority();" id ="but2">Authority
+            </button>
+          </div>
+          <div id = "user"></div>
+          <div id = "authority"></div>
+       
+     
+             
+                <button type="button" class="btn btn-outline-info waves-effect ml-auto"  style=" max-width: 20%;border-radius: 30%; margin-bottom: 30px;" data-dismiss="modal" id = "but4">Close</button>
+              </div> 
+        </center>
+              </div>
+      
+            </div>
+            
+          </div>
+        
+    
 
 
 
