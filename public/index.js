@@ -6,7 +6,7 @@ function Register()
 
 htm = `
 <div class="container-fluid"style="margin-top: 100px; margin-bottom: 100px;padding: 2%; border-style: solid;
-border-color: green; border-radius: 7%; max-width: 950px;">
+border-color: #2dc997; border-radius: 7%; max-width: 950px;">
 
 <h1 class="well"  style="text-align: center;font-weight: bold;" >SIGNUP FORM</h1>
 	<div class="col-lg-12 well">
@@ -43,7 +43,7 @@ border-color: green; border-radius: 7%; max-width: 950px;">
           </div>	
         </div>
 						
-					<br><br><center><button type="button" class=" col-sm-2 col-sm-3 btn btn-lg btn-info">SIGNUP</button></center>	<br>				
+					<br><br><center><button type="button" class=" col-sm-2 col-sm-3 btn btn-lg btn-info"style=" background-color:#2dc997;">SIGNUP</button></center>	<br>				
 					</div>
 	
 				</div>
