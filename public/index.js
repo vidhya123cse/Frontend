@@ -78,35 +78,35 @@ htm = `
 				
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 form-group">
-							<label><b>First Name</b></label>
-							<input type="text" placeholder="Enter First Name *" class="form-control" value="" />
+							<label><b> <span style="color: red;">*</span>First Name</b></label>
+							<input type="text" placeholder="Enter First Name" class="form-control" value="" />
 						</div>
 						<div class="col-xs-12 col-sm-6 form-group">
-							<label><b>Last Name</b></label>
-							<input type="text" placeholder="Enter Last Name *" class="form-control" value="" />
+							<label><b><span style="color: red;">*</span>Last Name</b></label>
+							<input type="text" placeholder="Enter Last Name" class="form-control" value="" />
 						</div>
 		</div>					
 		<div class="form-group col-xs-12 col-sm-6">
-							<label><b>Address</b></label>
+							<label><b><span style="color: red;">*</span>Address</b></label>
 							<textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
 						</div>	
 						<div class="row">
 							<div class="col-sm-4 form-group col-xs-12 col-sm-6 ">
-								<label><b>City</b></label>
+								<label><b> <span style="color: red;">*</span>City</b></label>
 								<input type="text" placeholder="Enter City Name Here.." class="form-control">
 							</div>	
 							<div class="col-sm-4 form-group col-xs-12 col-sm-6 ">
-								<label><b>State</b></label>
+								<label><b><span style="color: red;">*</span>State</b></label>
 								<input type="text" placeholder="Enter State Name Here.." class="form-control">
 							</div>	
 							<div class="col-sm-4 form-group col-xs-12 col-sm-6 ">
-								<label><b>Zip</b></label>
+								<label><b><span style="color: red;">*</span>Zip</b></label>
 								<input type="text" placeholder="Enter Zip Code Here.." class="form-control">
 							</div>		
 					
 
 						<div class="form-group"><br>
-						<label class=" control-label" for="filebutton"><b>Upload Any proof</b></label>
+						<label class=" control-label" for="filebutton"><b><span style="color: red;">*</span>Upload Any proof</b></label>
 						<div class="col-xs-12 col-sm-6 col-md-9">
 						  <input name="filebutton" class="input-file" id="filebutton" type="file">
 						</div>
@@ -115,7 +115,7 @@ htm = `
 					  </div>
 					  </div> 	
 					<br>
-						<div class="col-sm-4 container-fluid col-xs-12 col-sm-6"style="border-color: #2dc997;margin:auto auto auto auto; min-width: 300px; max-width: 85%; border-radius: 7%;border-style: solid;"><br>
+						<div class="col-sm-4 container-fluid col-xs-12 col-sm-6"style="margin:auto auto auto auto; min-width: 300px; max-width: 85%; border-radius: 7%;"><br>
 		  <label><b style="font-size: 27px;">Instructions</b></label>
 		  <br>
 		  <ul>
@@ -127,10 +127,12 @@ htm = `
 		  </ul>
 		<br>
 		<br>
-		<input type="checkbox" class="form-check-input" id="instruct" value="done">
+		</div> 
+		<span style="color: red;">*</span><input type="checkbox" class="form-check-input" id="instruct" value="done">
 		<label class="form-check-label"> I have a Read the Instructions</label><br><br><br>
-		  </div> 
-
+		  
+		 <br><br>
+		 <span style="color: red;">* Required Fields</span><br><br>
 		
 						<button type="button" style="max-width: 50%;" class="btn btn-lg btn-info">Submit</button>	<br>
 						
@@ -163,7 +165,7 @@ htm = `<div class="form-group col-sm-4 col-xs-12 col-sm-6"style ="margin:auto au
 <label><b>Authority Address</b></label>
 <input type="text" placeholder="Enter Email Address *" class="form-control">
 </div>
-<div class="col-sm-4 form-group col-xs-12 col-sm-6"style="border-color: #2dc997;margin:auto auto auto auto; min-width: 300px; max-width: 85%; border-radius: 7%;border-style: solid;"><br>
+<div class="col-sm-4 form-group col-xs-12 col-sm-6"style="	margin:auto auto auto auto; min-width: 300px; max-width: 85%; border-radius: 7%;"><br>
 <label><b style="font-size: 27px;">Instructions</b></label>
 <br>
 <ul>
@@ -175,9 +177,10 @@ htm = `<div class="form-group col-sm-4 col-xs-12 col-sm-6"style ="margin:auto au
 </ul>
 <br>
 <br>
+</div> 
 <input type="checkbox" class="form-check-input" id="instruct" value="done">
 <label class="form-check-label"> I have a Read the Instructions</label><br><br><br>
-</div> 
+
 
 
 			  <button type="button" style="max-width: 50%;" class="btn btn-lg btn-info">Submit</button>	<br>
