@@ -34,12 +34,12 @@ border-color: #2dc997; border-radius: 7%; max-width: 950px;">
             <div class="row">					
 					<div class="col-sm-4 form-group col-xs-12 col-sm-6 ">
 						<label><b>Mobile Number</b></label>
-            <input type="tel" placeholder="Enter Mobile Number *" class="form-control" value="">	</div>
+            <input type="tel" placeholder="Enter Mobile Number *" class="form-control" value="" pattern="[0-9]{10}">	</div>
             
 				
 					<div class="form-group col-sm-4 col-xs-12 col-sm-6 ">
 						<label><b>Email Address</b></label>
-						<input type="text" placeholder="Enter Email Address *" class="form-control">
+						<input type="email" placeholder="Enter Email Address *" class="form-control">
 		  </div>	
 		  <br><br>
 		  
@@ -134,7 +134,7 @@ htm = `
 		 <br><br>
 		 <span style="color: red;">* Required Fields</span><br><br>
 		
-						<button type="button" style="max-width: 50%;" class="btn btn-lg btn-info">Submit</button>	<br>
+						<button type="button" style=" background-color:#2dc997;max-width: 50%;" class="btn btn-lg btn-info">Submit</button>	<br>
 						
 						
   
@@ -161,9 +161,45 @@ function Authority()
 {
 
 
-htm = `<div class="form-group col-sm-4 col-xs-12 col-sm-6"style ="margin:auto auto auto auto;">
-<label><b>Authority Address</b></label>
-<input type="text" placeholder="Enter Email Address *" class="form-control">
+htm = `<h2 class="well" style="min-width: 320px;margin-top:2%; text-align: center;font-weight: bold;"id ="authority" >Registration Form</h2>
+<div class="col-lg-12 ">
+<div class=" col-xs-12 col-sm-6 col-md-9">
+
+<div class="row">
+						<div class="col-xs-12 col-sm-6 form-group">
+							<label><b> <span style="color: red;">*</span>First Name</b></label>
+							<input type="text" placeholder="Enter First Name" class="form-control" value="" />
+						</div>
+						<div class="col-xs-12 col-sm-6 form-group">
+							<label><b><span style="color: red;">*</span>Last Name</b></label>
+							<input type="text" placeholder="Enter Last Name" class="form-control" value="" />
+						</div>
+
+		</div>			
+		
+		
+		<div class="btn-group dropright">
+  <button class="btn btn-secondary dropdown-toggle" type="button"style="background-color:#2dc997;" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Job Title
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#" >Police Force</a>
+    <a class="dropdown-item" href="#" >RPF</a>
+    <a class="dropdown-item" href="#" >Others</a>
+  </div>
+</div>
+<div class="row">	
+<div class="form-group"><br>
+						<label class=" control-label" for="filebutton"><b><span style="color: red;">*</span>Upload ID card Image</b></label>
+						<div class="col-xs-12 col-sm-6 col-md-9">
+						  <input name="filebutton" class="input-file" id="filebutton" type="file">
+						</div>
+					  </div>
+					 
+					  </div>
+
+
+</div>
 </div>
 <div class="col-sm-4 form-group col-xs-12 col-sm-6"style="	margin:auto auto auto auto; min-width: 300px; max-width: 85%; border-radius: 7%;"><br>
 <label><b style="font-size: 27px;">Instructions</b></label>
@@ -178,12 +214,13 @@ htm = `<div class="form-group col-sm-4 col-xs-12 col-sm-6"style ="margin:auto au
 <br>
 <br>
 </div> 
-<input type="checkbox" class="form-check-input" id="instruct" value="done">
+<span style="color: red;">*</span><input type="checkbox" class="form-check-input" id="instruct" value="done">
 <label class="form-check-label"> I have a Read the Instructions</label><br><br><br>
 
+<br><br>
+<span style="color: red;">* Required Fields</span><br><br>
 
-
-			  <button type="button" style="max-width: 50%;" class="btn btn-lg btn-info">Submit</button>	<br>
+			  <button type="button" style="background-color:#2dc997;max-width: 50%;" class="btn btn-lg btn-info">Submit</button>	<br>
 	 `
 
 document.getElementById("authority").innerHTML= htm;
