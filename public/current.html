@@ -86,12 +86,12 @@
                     <div class="box-header with-border">
                       <div><b>Upload File</b></div>
                       <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-danger btn-xs remove-preview">
+                        <button type="button" class="btn btn-danger btn-xs remove-preview" onclick="resetFile()">
                           <i class="fa fa-times"></i> Reset The Field
                         </button>
                       </div>
                     </div>
-                    <div class="box-body"></div>
+                    <div class="box-body" id = "review"></div>
                   </div>
                 </div>
                 <div class="dropzone-wrapper">
@@ -99,9 +99,10 @@
                     <i class="glyphicon glyphicon-download-alt"></i>
                     <p>Choose an image file or drag it here.</p>
                   </div>
-                  <input type="file" name="img_logo" class="dropzone">
+                  <input type="file" name="img_logo" id ="fileupload" class="dropzone" multiple>
                 </div>
               </div>
+              <div id="dvPreview"></div>
             </div>
           </div>
     

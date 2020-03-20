@@ -1,54 +1,40 @@
-function readFile(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-  
-      reader.onload = function(e) {
-        var htmlPreview =
-          '<img width="200" src="' + e.target.result + '" />' +
-          '<p>' + input.files[0].name + '</p>';
-        var wrapperZone = $(input).parent();
-        var previewZone = $(input).parent().parent().find('.preview-zone');
-        var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
-  
-        wrapperZone.removeClass('dragover');
-        previewZone.removeClass('hidden');
-        boxZone.empty();
-        boxZone.append(htmlPreview);
-      };
-  
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
-  
-  function reset(e) {
-    e.wrap('<form>').closest('form').get(0).reset();
-    e.unwrap();
-  }
-  
-  $(".dropzone").change(function() {
-    readFile(this);
+$(function () {
+  $("#fileupload").change(function () {
+      if (typeof (FileReader) != "undefined") {
+          var dvPreview = $("#dvPreview");
+          dvPreview.html("");
+          var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+          $($(this)[0].files).each(function () {
+              var file = $(this);
+              if (regex.test(file[0].name.toLowerCase())) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+                      var img = $("<img />");
+                      img.attr("style", "height:100px;width: 100px; margin:10px");
+                      img.attr("src", e.target.result);
+                      dvPreview.append(img);
+                  }
+                  reader.readAsDataURL(file[0]);
+              } else {
+                  alert(file[0].name + " is not a valid image file.");
+                  dvPreview.html("");
+                  return false;
+              }
+          });
+      } else {
+          alert("This browser does not support HTML5 FileReader.");
+      }
   });
+});
   
-  $('.dropzone-wrapper').on('dragover', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(this).addClass('dragover');
-  });
+function resetFile() {
+  const file1 = document.getElementById("fileupload");
+  const file2 = document.getElementById("dvPreview");
+  file1.value = '';
+  file2.value = '';
+  $("#dvPreview").hide();
+}
   
-  $('.dropzone-wrapper').on('dragleave', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $(this).removeClass('dragover');
-  });
-  
-  $('.remove-preview').on('click', function() {
-    var boxZone = $(this).parents('.preview-zone').find('.box-body');
-    var previewZone = $(this).parents('.preview-zone');
-    var dropzone = $(this).parents('.form-group').find('.dropzone');
-    boxZone.empty();
-    previewZone.addClass('hidden');
-    reset(dropzone);
-  });
 
 
 
