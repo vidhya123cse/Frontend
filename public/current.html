@@ -74,55 +74,52 @@
 
   <body>
 
-    <section>
-      <form action="" method="POST" enctype="multipart/form-data">
-        <div class="container" style="margin-top: 100px;">
+      <div class="container-fluid" style="margin-top: 100px;border-color:#2dc997; border-radius: 10px; border-style: solid; max-width: 90%; min-width: 300px;">
+      <form action="" method="POST">
+        
           <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
+            
                 <label class="control-label"></label>
-                <div class="preview-zone hidden">
-                  <div class="box box-solid">
-                    <div class="box-header with-border">
-                      <div><b>Upload File</b></div>
-                      <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-danger btn-xs remove-preview" onclick="resetFile()">
-                          <i class="fa fa-times"></i> Reset The Field
-                        </button>
-                      </div>
+                
+                      <div style="margin: 20px;"><b>Upload File</b></div>
                     </div>
-                    <div class="box-body" id = "review"></div>
-                  </div>
-                </div>
-                <div class="dropzone-wrapper">
-                  <div class="dropzone-desc">
+                    <div class="box-body" id = "review" style="margin: 30px;">
+                
                     <i class="glyphicon glyphicon-download-alt"></i>
-                    <p>Choose an image file or drag it here.</p>
+                    <p>Choose  Image files or drag it here(max Two Images).</p>
                   </div>
+                  <div class="row">
+                  <div style="margin: 30px;">
                   <input type="file" name="img_logo" id ="fileupload" class="dropzone" multiple>
-                </div>
-              </div>
+                  </div>
+                  
               <div id="dvPreview"></div>
+            
             </div>
-          </div>
-    
           <div class="row">
-            <div class="col-md-12">
-              <button type="submit" class="btn btn-primary pull-right">Upload</button>
+            
+              <button type="submit" class="btn btn-primary pull-left"style="max-width: 200px; margin-left: 10px;background-color:#2dc997;">Upload</button>
+  
+              <button type="button" class="btn btn-danger pull-left" style="max-width: 200px;margin-left: 10px;" onclick="resetFile()"> Reset The Field
+            </button>
             </div>
-          </div>
-        </div>
+          
+      
       </form>
-    </section>
-    
-    
-    <div class="col-md-16 text-center">
-    <div class="btn-group btn-group-lg" role="group">
-    <p style="float: center;"><label></label>&nbsp;&nbsp;<a style = "text-decoration: none; color: white;background-color: #2dc997;"type="submit" class = "btn"onclick="video()" href="#video">&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload Input Video&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;</a></p>
-    
-    <p style="float: center;"><label></label>&nbsp;&nbsp;<a style = "text-decoration: none; color: white;background-color: #2dc997;"type="submit" class = "btn"onclick="third()" href="#third">Upload Info About Video Source</Source></a></p>
     </div>
+  
+    
+    <div class="row container-fluid" style="margin-left: 4px; margin-bottom: 50px;">
+            
+      <button type="submit" id = "up1" class="btn btn-primary pull-left"style="max-width: 300px; margin: 10px;background-color:#2dc997;" onclick="video()"href="#video" >Upload Input Video</button>
+
+      <button type="button" id = "up2"  class="btn btn-primary pull-left" style="max-width: 300px; margin: 10px;background-color:#2dc997;" onclick="third()" href="#third">Upload Info About Video Source
+    </button>
     </div>
+
+
+
+
     
     
     
