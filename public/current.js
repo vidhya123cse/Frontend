@@ -49,12 +49,15 @@ function resetvideo() {
 }
 
 function resetthird() {
-  const file1 = document.getElementById("job");
+  const file1 = document.getElementById("firstList");
   file1.value = '';
   $("#up1").show();
   $("#up2").show();
   $("#third").hide();
+  $("#mass").hide();
 }
+
+
 
 
 
@@ -87,34 +90,76 @@ document.getElementById("video").innerHTML= htm;
 
 
 
+
+
+
+
+
+function getauth(){
+
+var list1 = document.getElementById('firstList').value;
+var list2 = document.getElementById("secondList");
+
+
+if (list1 =='1')
+{
+
+list2.options.length=0;
+list2.options[0] = new Option('--Select--', '');
+list2.options[1] = new Option('Ernakulam Junction South (ERS)', '1');
+list2.options[2] = new Option('Thiruvananthapuram Central Station (TVC)', '2');
+list2.options[3] = new Option('Ernakulam Town Station (ERN)', '3');
+list2.options[4] = new Option('Angamaly Station (AFK)', '4');
+list2.options[5] = new Option('Chalakudi Railway Station (CKI)', '5');
+
+
+}
+else if (list1 =='2')
+{
+
+list2.options.length=0;
+list2.options[0] = new Option('--Select--', '');
+list2.options[1] = new Option('Police Stations-THiruvanthapuram','');
+list2.options[2] = new Option('kollam', '');
+list2.options[3] = new Option('Pathanamthitta', '');
+list2.options[4] = new Option('alappuzha', '');
+list2.options[5] = new Option('Kottayam', '');
+
+}
+}
+
+
+
+
 function third()
 {
 htm = `
 
-<div class="row">
-						<div class="col-sm-4 col-xs-12 col-sm-6"style="margin:15px;">
-						<label for="job">Source Authority</label>&nbsp;<br>
-
-						<select id="job">
-						  <option class="dropdown-item" value="">--select option--</option>
-						  <option class="dropdown-item" value="Police">Police Force</option>
-						  <option class="dropdown-item" value="RPF">RPF</option>
-						  <option class="dropdown-item" value="Others">Others</option>
-						
-            </select>
-            </div>
-						
-				
-
-
-<div class="col-xs-12 col-sm-6 form-group" style="margin:15px;">
-
-<input type="url" placeholder="Enter URL" class="form-control" value="" />
-</div>
-</div>
+<centre>
+<div class="col-md-4" id ="mass">
+<form>
+<h4>Select Department</h4>
+<div class ="container-fluid">
+<select class="form-control"  id='firstList' name='firstList' onClick="getauth()">
+<option class="dropdown-item" value="0">--Select--</option>
+						  <option class="dropdown-item" value="1">Railways</option>
+						  <option class="dropdown-item" value="2">Police</option>
+						  
+</select>
+ 
+<h4>Locate here</h4>
+<select class="form-control"  id='secondList' name='secondList' >
+</select>
+</div><br><br>
 <button type="button" class="btn btn-danger pull-left" style="max-width: 200px;margin-left: 10px; margin-bottom: 10px;" onclick="resetthird()"> Reset The Field
           </button>
-<br><br><br>
+ <br><br><br>
+</form>
+</div>
+</centre>
+
+
+
 `
 document.getElementById("third").innerHTML= htm;
 
