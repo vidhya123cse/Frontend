@@ -151,11 +151,17 @@ htm = `
 <select class="form-control"  id='secondList' name='secondList' >
 </select>
 </div><br><br>
+
+<div class ="row col-md-4 col-xs-12 col-sm-6 col-md-9"style="margin-left:5px;">
+<button type="button" class="btn btn-primary pull-left" style="max-width: 200px;margin-left: 10px; background-color:#2dc997; margin-bottom: 10px;"> Request for Video</button>
 <button type="button" class="btn btn-danger pull-left" style="max-width: 200px;margin-left: 10px; margin-bottom: 10px;" onclick="resetthird()"> Reset The Field
           </button>
+        </div>
  <br><br><br>
 </form>
 </div>
+
+<br><br>
 </centre>
 
 
